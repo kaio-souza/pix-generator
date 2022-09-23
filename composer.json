@@ -1,0 +1,22 @@
+{
+    "name": "kaio-souza/pix-php",
+    "description": "A simple PIX generator",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "KaioSouza\\PixPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kaio Souza",
+            "email": "profkaio@outlook.com"
+        }
+    ],
+    "require": {
+        "mpdf/qrcode": "^1.2",
+        "ext-mbstring": "*",
+        "ext-gd": "*"
+    }
+}
