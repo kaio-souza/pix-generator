@@ -28,4 +28,9 @@ class PixGenerator
         $qrText = $this->getQrCodeText($amount, $description);
         return Helper::getQrCodeFromText($qrText);
     }
+    public function getBase64QrCode($amount, $description = 'pix')
+    {
+        $qrText = $this->getQrCodeText($amount, $description);
+        return base64_encode(Helper::getQrCodeFromText($qrText));
+    }
 }

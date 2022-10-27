@@ -15,9 +15,11 @@ class Helper
 
     public static function formatAmount($amount)
     {
-        $amount = str_replace('.', '', $amount);
-        $amount = str_replace(',', '.', $amount);
-        return number_format($amount, 2, ',', '.');
+        if (str_contains($amount, ',')) {
+            $amount = str_replace('.', '', $amount);
+            $amount = str_replace(',', '.', $amount);
+        }
+        return number_format($amount, 2, '.', '');
     }
 
     public static function uniqueId($l = 23)

@@ -1,6 +1,9 @@
 # PIX GENERATOR
 A simple library to generate media / data to Copy and Paste Pix
 
+## Requeriments
+* To generate Images, the ext php-gd needs to be enable
+
 ## Instatiate Class
 
 Using Constants to Params (more secure, in cases of update)
@@ -41,6 +44,17 @@ echo $pix->getQrCodeText(20, 'Teste Lala');
 ```
 ## Get QRCode Image
 ```php
-echo $pix->getQrCode(20, 'Teste Lala');
 // returns QRCode PNG output
+$code = $pix->getQrCode(20, 'Teste Lala');
+// Save the output on file
+file_put_contents('qr.png', $code);
 ```
+or
+```php
+$code = $pix->getBase64QrCode('14,50', 'Teste Lala');
+
+// save QRCODE on file qr.png
+echo "<img src='data:image/png;base64, {$code}' />";
+```
+
+** The amount accepts a comma or dots to separate the decimal places
