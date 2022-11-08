@@ -17,6 +17,6 @@ jobs:
           TEST_NAME: BasicTests
         with:
           bootstrap: vendor/autoload.php
-          configuration: tests/phpunit.xml
+          configuration: phpunit.xml
           args: --coverage-text
           php_version: "8.1"
