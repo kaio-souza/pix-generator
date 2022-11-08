@@ -19,4 +19,4 @@ jobs:
           bootstrap: vendor/autoload.php
           configuration: tests/phpunit.xml
           args: --coverage-text
-          php_version: "7.1"
+          php_version: "8.1"
