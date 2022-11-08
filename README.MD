@@ -1,6 +1,12 @@
 # PIX GENERATOR
 A simple library to generate media / data to Copy and Paste Pix
 
+Avalilable on Composer
+```
+composer require kaio-souza/pix-php
+```
+
+
 ## Requeriments
 * To generate Images, the ext php-gd needs to be enable
 
